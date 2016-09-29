@@ -10,7 +10,6 @@ public class Kangaroo extends Actor
 {
     int numTurns   = 0;
     boolean jump   = true;
-    boolean back   = false;
 
     /**
      * Act - do whatever the Kangaroo wants to do. This method is called whenever
@@ -18,7 +17,7 @@ public class Kangaroo extends Actor
      */
     public void act() 
     {
-        jumpLikeKangaroo();
+        // jumpLikeKangaroo();
         if (isAtEdge() ) {
             setLocation(10, 158);
         }
@@ -30,15 +29,11 @@ public class Kangaroo extends Actor
         {
             if (jump) {
                 setRotation(335);
-                if (numTurns > 0) {
-                    back = true;    // We jumped... now we must return back next time.
-                }
             }
-            else { 
+            else {  // We jumped... now we must return back.
                 setRotation(45);
-                back = false;   // Next time jump... don't return back.
             }
-            jump = !jump;   // Toggle the jump. We'll jump once out of every two times we 'Act'.
+            jump = !jump;   // Toggle the jump. We'll jump half of the time... we 'Act'.
         }
         move(15);
         numTurns++;

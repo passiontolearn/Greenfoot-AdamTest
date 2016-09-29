@@ -18,7 +18,7 @@ public class SmilyTongue extends Actor
     {
         // rotateR();
         // rotateL();
-        noNo();
+        // noNo();
     }
 
     public void rotateR() 

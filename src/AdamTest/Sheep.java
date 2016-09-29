@@ -14,7 +14,7 @@ public class Sheep extends Actor
      */
     public void act() 
     {
-        sheepMove();
+        // sheepMove();
     }
     
     public void sheepMove()
